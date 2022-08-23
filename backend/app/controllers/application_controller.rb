@@ -18,6 +18,11 @@ class ApplicationController < Sinatra::Base
     ticket.to_json(only: [:price])
   end
 
+  get "/users" do
+    users = User.all
+    users.to_json
+  end
+
   post "/shows" do
     shows = Show.create(
       show_name: params[:show_name],
