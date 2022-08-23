@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useEffect, useState} from "react";
 import CardContainer from './CardContainer';
+import SearchBar from './SearchBar';
 
 
 
@@ -64,7 +65,7 @@ function App() {
 export default App;
 
 
-// card container
+// card container 
 // card container child
 // search bar
 // header (user in top right, "my tickets")
