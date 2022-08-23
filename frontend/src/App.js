@@ -26,15 +26,31 @@ function App() {
       </div>
       <div style={{ 
         backgroundColor: 'blue',
-        height: '500px'
+        height: '0%'
          }}>
-          <ul>
+          <div>
             {shows.map((show) => {
               return (
-                <h1>{show.show_name}</h1>
+                <p style={{
+                  textAlign: "center",
+                  border: "grey solid 1px",
+                  padding: "1rem",
+                  width: "15rem",
+                  height: "25rem",
+                  display: "inline-grid",
+                  margin: "1rem 2rem",
+                  boxShadow: "3px 4px #e04b52"
+                }}>
+                  {show.show_name} <br></br>
+                  {show.show_time} <br></br>
+                  {show.musician} <br></br>
+                  {show.tickets_left} <br></br>
+                  <img style={{ width: "15rem" }}src={show.image_url}></img>
+
+                </p>
               )
             })}  
-          </ul> 
+          </div> 
       </div>
 
 
