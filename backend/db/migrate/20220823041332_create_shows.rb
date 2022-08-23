@@ -5,6 +5,7 @@ class CreateShows < ActiveRecord::Migration[6.1]
       t.datetime :show_time
       t.string :musician
       t.integer :tickets_left
+      t.string :image_url
     end
   end
 end
