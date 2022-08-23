@@ -18,15 +18,16 @@ class ApplicationController < Sinatra::Base
     ticket.to_json(only: [:price])
   end
 
-  # post "/shows" do
-  #   shows = Show.create(
-  #     show_name: params[:show_name],
-  #     show_time: params[:show_time],
-  #     musician: params[:musician],
-  #     tickets_left: params[:tickets_left]
-  #   )
-  #   shows.to_json
-  # end
+  post "/shows" do
+    shows = Show.create(
+      show_name: params[:show_name],
+      show_time: params[:show_time],
+      musician: params[:musician],
+      tickets_left: params[:tickets_left],
+      image_url: params[:image_url]
+    )
+    shows.to_json
+  end
 
   # patch "/shows/:id" do
   #   shows = Show.find(params[:id])
