@@ -8,11 +8,11 @@ Show.reset_pk_sequence
 Ticket.reset_pk_sequence
 User.reset_pk_sequence
 
-Show.create(show_name: "Wilco Tour", show_time: '2022-06-24', musician: "Wilco", tickets_left: 150)
-Show.create(show_name: "Lady Gaga Tour", show_time: '2022-06-28', musician: "Lady Gaga", tickets_left: 100)
-Show.create(show_name: "AC/DC", show_time: '2022-07-6', musician: "AC/DC", tickets_left: 125)
-Show.create(show_name: "Lil Nas X", show_time: '2022-07-12', musician: "Lil Nas X", tickets_left: 50)
-Show.create(show_name: "Ariana Grande", show_time: '2022-07-18', musician: "Ariana Grande", tickets_left: 75)
+Show.create(show_name: "Wilco Tour", show_time: '2022-06-24 19:00:00', musician: "Wilco", tickets_left: 150)
+Show.create(show_name: "Lady Gaga Tour", show_time: '2022-06-28 22:00:00', musician: "Lady Gaga", tickets_left: 100)
+Show.create(show_name: "AC/DC", show_time: '2022-07-6 21:30:00', musician: "AC/DC", tickets_left: 125)
+Show.create(show_name: "Lil Nas X", show_time: '2022-07-12 18:00:00', musician: "Lil Nas X", tickets_left: 50)
+Show.create(show_name: "Ariana Grande", show_time: '2022-07-18 22:30:00', musician: "Ariana Grande", tickets_left: 75)
 
 User.create(full_name: 'Ryan Woodruff', email: "something@gmail.com")
 User.create(full_name: 'Ian Iversen', email: "whatever@gmail.com")
