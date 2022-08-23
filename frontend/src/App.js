@@ -1,5 +1,6 @@
 import './App.css';
 import React, {useEffect, useState} from "react";
+import CardContainer from './CardContainer';
 
 
 
@@ -53,6 +54,7 @@ function App() {
           </div> 
       </div>
 
+            <CardContainer/>
 
       
     </div>
@@ -62,3 +64,8 @@ function App() {
 export default App;
 
 
+// card container
+// card container child
+// search bar
+// header (user in top right, "my tickets")
+// my tickets component (new page, react routes)
