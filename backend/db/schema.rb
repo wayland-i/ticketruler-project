@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2022_08_23_041403) do
     t.datetime "show_time"
     t.string "musician"
     t.integer "tickets_left"
+    t.string "image_url"
   end
 
   create_table "tickets", force: :cascade do |t|
