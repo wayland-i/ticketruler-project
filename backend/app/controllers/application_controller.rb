@@ -18,6 +18,11 @@ class ApplicationController < Sinatra::Base
     ticket.to_json(only: [:price])
   end
 
+  get "/users" do
+    users = User.all
+    users.to_json
+  end
+
   post "/shows" do
     shows = Show.create(
       show_name: params[:show_name],
@@ -29,31 +34,31 @@ class ApplicationController < Sinatra::Base
     shows.to_json
   end
 
-  # patch "/shows/:id" do
-  #   shows = Show.find(params[:id])
-  #   shows.update(
-  #     tickets_left: params[:tickets_left] 
-  #   )
-  #   review.to_json
-  # end
+  patch "/shows/:id" do
+    shows = Show.find(params[:id])
+    shows.update(
+      tickets_left: params[:tickets_left] 
+    )
+    review.to_json
+  end
 
-  # delete "/shows/:id" do 
-  #   show = Show.find(params[:id])
-  #   show.destroy
-  #   show.to_json
-  # end
+  delete "/shows/:id" do 
+    show = Show.find(params[:id])
+    show.destroy
+    show.to_json
+  end
 
-  # post "/users" do
-  #   users = User.create(
-  #     full_name: params[:full_name],
-  #     email: params[:email]
-  #   )
-  #   users.to_json
-  # end
+  post "/users" do
+    users = User.create(
+      full_name: params[:full_name],
+      email: params[:email]
+    )
+    users.to_json
+  end
 
-  # delete "/users/:id" do 
-  #   users = User.find(params[:id])
-  #   users.destroy
-  #   users.to_json
-  # end
+  delete "/users/:id" do 
+    users = User.find(params[:id])
+    users.destroy
+    users.to_json
+  end
 end
