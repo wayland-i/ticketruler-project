@@ -23,11 +23,11 @@ Show.create(show_name: "Bad Bunny", show_time: '2022-08-20 20:00:00', musician: 
 Show.create(show_name: "Taylor Swift", show_time: '2022-08-24 20:00:00', musician: "Taylor Swift", tickets_left: 12, image_url: 'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iisr9KlJAbds/v2/-1x-1.jpg')
 
 
-User.create(full_name: 'Ryan Woodruff', email: "something@gmail.com")
-User.create(full_name: 'Ian Iversen', email: "whatever@gmail.com")
-User.create(full_name: 'Jonathon Bialas', email: "jonathon@gmail.com")
-User.create(full_name: 'John Smith', email: "john@gmail.com")
-User.create(full_name: 'Thomas Brown', email: "thomas@gmail.com")
+User.create(full_name: 'Ryan Woodruff', email: "something@gmail.com", password:"asdfghjk" )
+User.create(full_name: 'Ian Iversen', email: "whatever@gmail.com", password:"passw0rd")
+User.create(full_name: 'Jonathon Bialas', email: "jonathon@gmail.com", password:"Cackle1")
+User.create(full_name: 'John Smith', email: "john@gmail.com", password:"frito2")
+User.create(full_name: 'Thomas Brown', email: "thomas@gmail.com", password:"portlamb14")
 
 Ticket.create(price: 100, show_id: 1, user_id: 1, party_size: 3)
 Ticket.create(price: 200, show_id: 2, user_id: 1, party_size: 1)

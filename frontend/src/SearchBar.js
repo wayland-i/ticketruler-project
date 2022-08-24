@@ -1,17 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 
 // const[filter, setFilter] = useState("")
 
-function SearchBar() {
+function SearchBar( { setSearchString } ) {
 
-    function search(e){
-        // setFilter((filter)=>{e.target.value})
-        console.log("fdsf")
-    }
 
     return (
         <div className="SearchBar">
-            <input onChange = {search} placeholder="Search for a show!" />
+            <input onChange={(e) => setSearchString(e.target.value)} placeholder="Search for a show!" />
         </div>
     )
 }
