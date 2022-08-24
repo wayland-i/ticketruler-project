@@ -1,5 +1,12 @@
 import './App.css';
 import React, {useEffect, useState} from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './Navbar';
+import AccountInfo from "./AccountInfo";
+import MyTickets from "./MyTickets";
+import HomePage from "./HomePage";
+
 
 
 
@@ -13,48 +20,15 @@ function App() {
   }, [])
   
   return (
-    <div>
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '60vh',
-      }}>
-        <h1>TicketRuler</h1>
-        <input placeholder="search for an upcoming show..." style={{width: "200px", height: "50px"}}></input>
-      </div>
-      <div style={{ 
-        backgroundColor: 'blue',
-        height: '0%'
-         }}>
-          <div>
-            {shows.map((show) => {
-              return (
-                <p style={{
-                  textAlign: "center",
-                  border: "grey solid 1px",
-                  padding: "1rem",
-                  width: "15rem",
-                  height: "25rem",
-                  display: "inline-grid",
-                  margin: "1rem 2rem",
-                  boxShadow: "3px 4px #e04b52"
-                }}>
-                  {show.show_name} <br></br>
-                  {show.show_time} <br></br>
-                  {show.musician} <br></br>
-                  {show.tickets_left} <br></br>
-                  <img style={{ width: "15rem" }}src={show.image_url}></img>
-
-                </p>
-              )
-            })}  
-          </div> 
-      </div>
-
-
-      
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' exact element={<HomePage/>} />
+          <Route path='/AccountInfo' element={<AccountInfo/>} />
+          <Route path='/MyTickets' element={<MyTickets/>} />
+        </Routes>
+      </Router>
     </div>
   )
 }
