@@ -2,10 +2,23 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   # Add your routes here
-  
+
+  #I should just do users/:id'
+  #paraming into that for each user
+
   get "/shows" do
     shows = Show.all
     shows.to_json
+  end
+
+  get "/" do
+    data = Show.all
+    data.to_json(include: { tickets: { include: :user } })
+  end
+
+  get "/:id" do
+    user = User.find(params[:id])
+    user.to_json(include: { tickets: { include: :show } })
   end
 
   get "/shows/:id" do

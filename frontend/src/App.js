@@ -8,8 +8,6 @@ import MyTickets from "./MyTickets";
 import HomePage from "./HomePage";
 
 
-
-
 function App() {
   const [shows, setShows] = useState([])
 
@@ -18,6 +16,18 @@ function App() {
     .then((r) => r.json())
     .then((shows) => setShows(shows));
   }, [])
+
+
+  const [user, setUser] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:9292/4")
+    .then((r) => r.json())
+    .then((user) => setUser(user))
+    // .catch((error) => console.error("Error", error))
+  }, [])
+
+  
+  
 
   const [searchString, setSearchString] = useState('')
 
@@ -40,7 +50,7 @@ function App() {
         <Routes>
           <Route path='/' exact element={<HomePage shows={filtered} setSearchString={setSearchString} />} />
           <Route path='/AccountInfo' element={<AccountInfo/>} />
-          <Route path='/MyTickets' element={<MyTickets/>} />
+          <Route path='/MyTickets' element={<MyTickets user={user}/>} />
         </Routes>
       </Router>
     </div>
