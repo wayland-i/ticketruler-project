@@ -2,10 +2,10 @@ import React from "react";
 import SearchBar from './SearchBar';
 import ConcertContainer from './ConcertContainer';
 
-function HomePage({shows}) {
+function HomePage({shows, setSearchString}) {
     return (
         <div>
-            <SearchBar />
+            <SearchBar setSearchString={setSearchString} />
             <ConcertContainer shows={shows} />
         </div>
     )
