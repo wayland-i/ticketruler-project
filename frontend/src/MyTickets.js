@@ -10,9 +10,11 @@ function MyTickets({ user }) {
 
     useEffect(() => {
         if ( user.length !== 0 ) {
-            user.tickets.map((ticket) => {
-                setUserTickets([...userTickets, ticket])
-            })
+
+            setUserTickets(user.tickets)
+            // user.tickets.map((ticket) => {
+            //     setUserTickets([...userTickets, ticket])
+            // })
         }
       }, [user])
 
