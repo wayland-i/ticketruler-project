@@ -1,12 +1,4 @@
-
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './Navbar';
-
-
-
-import './App.css';
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './Navbar';
@@ -32,7 +24,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' exact element={<HomePage/>} />
+          <Route path='/' exact element={<HomePage shows={shows} />} />
           <Route path='/AccountInfo' element={<AccountInfo/>} />
           <Route path='/MyTickets' element={<MyTickets/>} />
         </Routes>

@@ -2,11 +2,11 @@ import React from "react";
 import SearchBar from './SearchBar';
 import ConcertContainer from './ConcertContainer';
 
-function HomePage() {
+function HomePage({shows}) {
     return (
         <div>
             <SearchBar />
-            <ConcertContainer />
+            <ConcertContainer shows={shows} />
         </div>
     )
 }
