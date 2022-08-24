@@ -1,8 +1,21 @@
 import React from "react";
 
-function MyTickets() {
+function MyTickets({ user }) {
     return (
         <div>
+
+
+            {user.tickets.map((ticket) => {
+                return (
+                    <div className="Card">
+                        {ticket.price}
+                        
+                    </div>
+                    
+                )
+            })}
+            
+            
         </div>
     )
 }
