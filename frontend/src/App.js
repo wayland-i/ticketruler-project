@@ -19,11 +19,11 @@ function App() {
 
 
   const [user, setUser] = useState([])
-
   useEffect(() => {
     fetch("http://localhost:9292/4")
     .then((r) => r.json())
-    .then((user) => setUser(user));
+    .then((user) => setUser(user))
+    // .catch((error) => console.error("Error", error))
   }, [])
 
   

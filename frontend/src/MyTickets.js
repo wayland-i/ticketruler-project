@@ -1,21 +1,26 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import Ticket from "./Ticket";
 
 function MyTickets({ user }) {
+
+    const [userTickets, setUserTickets] = useState([])
+
+    useEffect(() => {
+        if ( user.length !== 0 ) {
+            user.tickets.map((ticket) => {
+                setUserTickets([...userTickets, ticket])
+            })
+        }
+      }, [user])
+
+      const createTickets = userTickets.map(ticket => {
+        return (<Ticket ticket={ticket} />)
+      })
+    
+
     return (
         <div>
-
-
-            {user.tickets.map((ticket) => {
-                return (
-                    <div className="Card">
-                        {ticket.price}
-                        
-                    </div>
-                    
-                )
-            })}
-            
-            
+            {createTickets}
         </div>
     )
 }
