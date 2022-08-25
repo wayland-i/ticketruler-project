@@ -12,7 +12,7 @@ function App() {
   const [shows, setShows] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:9292/shows")
+    fetch("http://localhost:9292/")
     .then((r) => r.json())
     .then((shows) => setShows(shows));
   }, [])
@@ -20,7 +20,7 @@ function App() {
 
   const [user, setUser] = useState([])
   useEffect(() => {
-    fetch("http://localhost:9292/4")
+    fetch("http://localhost:9292/users/4")
     .then((r) => r.json())
     .then((user) => setUser(user))
     // .catch((error) => console.error("Error", error))

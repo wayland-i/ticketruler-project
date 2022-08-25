@@ -12,11 +12,11 @@ function AccountInfo() {
 
     const [users, setUsers] = useState([])
     //check if user already exists
-    useEffect(() => {
-            fetch("http://localhost:9292/users")
-            .then((r) => r.json())
-            .then((user) => setUsers(user));
-          }, [])
+    // useEffect(() => {
+    //         fetch("http://localhost:9292/users")
+    //         .then((r) => r.json())
+    //         .then((user) => setUsers(user));
+    //       }, [])
 
     return (
         <>
