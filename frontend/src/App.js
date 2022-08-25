@@ -25,17 +25,6 @@ function App() {
     .then((user) => setUser(user))
     // .catch((error) => console.error("Error", error))
   }, [])
-
-
-  function handleUpdate(id) {
-    console.log('handle update works')
-    console.log(id)
-  }
-
-
-
-  
-  
   
 
   const [searchString, setSearchString] = useState('')
@@ -59,7 +48,7 @@ function App() {
         <Routes>
           <Route path='/' exact element={<HomePage shows={filtered} setSearchString={setSearchString} />} />
           <Route path='/AccountInfo' element={<AccountInfo/>} />
-          <Route path='/MyTickets' element={<MyTickets handleUpdate={handleUpdate} user={user}/>} />
+          <Route path='/MyTickets' element={<MyTickets user={user}/>} />
         </Routes>
       </Router>
     </div>

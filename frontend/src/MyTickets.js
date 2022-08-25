@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Ticket from "./Ticket";
 
-function MyTickets({ user, handleUpdate }) {
+function MyTickets({ user }) {
 
     const [userTickets, setUserTickets] = useState([])
 
@@ -16,6 +16,23 @@ function MyTickets({ user, handleUpdate }) {
             method: "DELETE",
         })
       }
+
+
+
+      function handleUpdate(e, id) {
+        e.preventDefault()
+        const partySizeInput = e.target.newPartySize.value
+
+        const data = { party_size: partySizeInput }
+
+        fetch(`http://localhost:9292/ticket-patch/${id}`, {
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+    }
 
     useEffect(() => {
         if ( user.length !== 0 ) {
