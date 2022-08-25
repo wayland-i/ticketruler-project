@@ -75,4 +75,10 @@ class ApplicationController < Sinatra::Base
     users.destroy
     users.to_json
   end
+
+  delete "/ticket-delete/:id" do 
+    ticket = Ticket.find(params[:id])
+    ticket.destroy
+    ticket.to_json
+  end
 end
