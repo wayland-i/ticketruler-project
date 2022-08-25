@@ -11,7 +11,7 @@ function ConcertContainer({shows, setCurrentShow}) {
     
 
     return (
-        <div>
+        <div className="ConcertContainer" >
             <p className="upcomingshows">Upcoming Shows!</p>
             {createCards}
         </div>

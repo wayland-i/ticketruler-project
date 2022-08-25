@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <div className="NavBar">
-            <li>
+            <p className="Link" >
                 <Link to="/">Main Menu</Link>
-            </li>
-            <li>
+            </p>
+            <p className="Link" >
                 <Link to="/AccountInfo">Account</Link>
-            </li>
-            <li>
+            </p>
+            <p className="Link" >
                 <Link to="/MyTickets">My Tickets</Link>
-            </li>
+            </p>
         </div>
     );
 }
