@@ -7,7 +7,7 @@ function Card({show}) {
             {show.show_time} <br></br>
             {show.musician} <br></br>
             {show.tickets_left} <br></br>
-            <img style={{ width: "15rem" }}src={show.image_url}></img>
+            <img alt="Musician" style={{ width: "15rem" }} src={show.image_url}></img>
         </div>
     )
 }
