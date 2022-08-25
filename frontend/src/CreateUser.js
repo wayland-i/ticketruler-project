@@ -30,7 +30,7 @@ function CreateUser({users}) {
             <label for="Email">Email:</label>
             <input type="text" id="Email" name="Email"/><br></br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password"/>
+            <input type="password" id="password" name="password"/> <br></br>
             <button type="submit" form="nameform" value="Submit" >Submit</button>
          </form>
          

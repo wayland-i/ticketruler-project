@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import Login from "./Login";
 import CreateUser from "./CreateUser";
 
-function AccountInfo() {
+function AccountInfo({ setUser }) {
 
    const [newUser, setNewUser] = useState(true)
 
@@ -21,7 +21,7 @@ function AccountInfo() {
     return (
         <>
          <button onClick={click}>{newUser?"Login": "Create Account"}</button>
-         {newUser?<CreateUser users = {users}/>:<Login users = {users}/>}
+         {newUser?<CreateUser users = {users}/>:<Login users = {users} setUser={setUser}/>}
         </> 
     )
 }

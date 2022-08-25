@@ -18,14 +18,17 @@ function App() {
   }, [])
 
 
-  const [user, setUser] = useState([])
+
+  const [user, setUser] = useState([]) 
+  
   useEffect(() => {
-    fetch("http://localhost:9292/users/4")
+    fetch(`http://localhost:9292/users/4`)
     .then((r) => r.json())
     .then((user) => setUser(user))
     // .catch((error) => console.error("Error", error))
   }, [])
-  
+
+
 
   const [searchString, setSearchString] = useState('')
 
@@ -47,7 +50,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' exact element={<HomePage shows={filtered} setSearchString={setSearchString} />} />
-          <Route path='/AccountInfo' element={<AccountInfo/>} />
+          <Route path='/AccountInfo' element={<AccountInfo setUser={setUser}/>} />
           <Route path='/MyTickets' element={<MyTickets user={user}/>} />
         </Routes>
       </Router>

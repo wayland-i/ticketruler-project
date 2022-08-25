@@ -28,6 +28,14 @@ class ApplicationController < Sinatra::Base
       password: params[:password]
     )
   end
+
+  get "/user/login" do
+    activeUser = User.find(
+      email: params[:email],
+      password: params[:password]
+    )
+  end
+
   
 
   post "/shows" do
