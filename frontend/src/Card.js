@@ -8,6 +8,7 @@ function Card({show}) {
             {show.musician} <br></br>
             {show.tickets_left} <br></br>
             <img alt="Musician" style={{ width: "15rem" }} src={show.image_url}></img>
+            <button>Purchase Tickets</button>
         </div>
     )
 }
