@@ -92,4 +92,12 @@ class ApplicationController < Sinatra::Base
     ticket.to_json
   end
 
+  patch "/ticket-patch/:id" do
+    ticket = Ticket.find(params[:id])
+    ticket.update(
+      party_size: params[:party_size]
+    )
+    ticket.to_json
+  end
+
 end
