@@ -1,23 +1,30 @@
 import React, {useState, useEffect} from "react";
 import Ticket from "./Ticket";
 
-function MyTickets({ user }) {
-    // console.log(user.tickets)
+function MyTickets({ user, handleUpdate }) {
 
     const [userTickets, setUserTickets] = useState([])
-    console.log(user.tickets)
-    console.log(userTickets)
+
+    function handleDelete(id) {
+        console.log('handle deelete works')
+        console.log(id)
+        const deleteArray = userTickets.filter(ticket => {
+            return ticket.id !== id
+        })
+        setUserTickets(deleteArray)
+        fetch(`http://localhost:9292/ticket-delete/${id}`, {
+            method: "DELETE",
+        })
+      }
 
     useEffect(() => {
         if ( user.length !== 0 ) {
-            user.tickets.map((ticket) => {
-                setUserTickets([...userTickets, ticket])
-            })
+            setUserTickets(user.tickets)
         }
       }, [user])
 
       const createTickets = userTickets.map(ticket => {
-        return (<Ticket ticket={ticket} />)
+        return (<Ticket handleDelete={handleDelete} handleUpdate={handleUpdate} key={ticket.id} ticket={ticket} />)
       })
     
 
