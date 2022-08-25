@@ -5,16 +5,19 @@ function CreateUser({users}) {
     //create new user
     const myFunction = (e) => {
         e.preventDefault()
-        // console.log(e.target.name.value, e.target.Email.value, e.target.password.value)
-        // fetch('http://localhost:3000/users',{
-        //     method: 'POST',
-        //     headers:{
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify()
-        // })
-        // .then(res=>res.json())
-        // .then(user => console.log(user))
+        console.log(e.target.name.value, e.target.Email.value, e.target.password.value)
+        const newUser = { "full_name": e.target.name.value, "email": e.target.Email.value, "password": e.target.password.value }
+        fetch('http://localhost:9292/users',{
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newUser)
+        })
+        alert(`Account Created! Welcome ${e.target.name.value}!`)
+        e.target.reset()
+        
+        
     }
 
 
