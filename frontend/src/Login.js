@@ -1,6 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 
-function Login() {
+
+  //check login info
+  // if true: log user in (useRef?)
+  // if false: respond Email or Password incorrect
+function Login({users}) {
+
+    function account(e){
+      //if (users.find(e.target.value)) {
+      //  const loggedIn =  React.createContext(e.target.value) <-- useContext(loggedIn) to assign value
+      //}else 
+      //  setErrorMessage("Username or Password Incorrect")
+    }   
+    
+    const [errorMessage, setErrorMessage] = useState('')
+
     return(
       <>
         <p>User Login</p>
@@ -11,6 +25,7 @@ function Login() {
             <input type="text" id="lname" name="lname"/>
          </form>
          <button type="submit" form="nameform" value="Submit">Submit</button>
+         <p>{errorMessage}</p>
       </>
     )
 }

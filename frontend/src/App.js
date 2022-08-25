@@ -6,7 +6,6 @@ import Navbar from './Navbar';
 import AccountInfo from "./AccountInfo";
 import MyTickets from "./MyTickets";
 import HomePage from "./HomePage";
-import PurchaseTickets from "./PurchaseTickets";
 
 
 function App() {
@@ -33,6 +32,8 @@ function App() {
     console.log(id)
   }
 
+
+
   
   
   
@@ -57,7 +58,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' exact element={<HomePage shows={filtered} setSearchString={setSearchString} />} />
-          <Route path='/PurchaseTickets' element={<PurchaseTickets/>} />
           <Route path='/AccountInfo' element={<AccountInfo/>} />
           <Route path='/MyTickets' element={<MyTickets handleUpdate={handleUpdate} user={user}/>} />
         </Routes>

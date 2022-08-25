@@ -13,9 +13,6 @@ function Navbar() {
             <li>
                 <Link to="/MyTickets">My Tickets</Link>
             </li>
-            <li>
-                <Link to="/PurchaseTickets">Purchase Tickets</Link>
-            </li>
         </div>
     );
 }
