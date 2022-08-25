@@ -75,4 +75,21 @@ class ApplicationController < Sinatra::Base
     users.destroy
     users.to_json
   end
+
+  delete "/ticket-delete/:id" do 
+    ticket = Ticket.find(params[:id])
+    ticket.destroy
+    ticket.to_json
+  end
+
+  post "/ticket-create" do
+    ticket = Ticket.create(
+      price: params[:price],
+      show_id: params[:show_id],
+      user_id: params[:user_id],
+      party_size: params[:party_size]
+    )
+    ticket.to_json
+  end
+
 end
