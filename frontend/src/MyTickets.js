@@ -2,11 +2,8 @@ import React, {useState, useEffect} from "react";
 import Ticket from "./Ticket";
 
 function MyTickets({ user }) {
-    // console.log(user.tickets)
 
     const [userTickets, setUserTickets] = useState([])
-    console.log(user.tickets)
-    console.log(userTickets)
 
     useEffect(() => {
         if ( user.length !== 0 ) {
@@ -15,7 +12,7 @@ function MyTickets({ user }) {
       }, [user])
 
       const createTickets = userTickets.map(ticket => {
-        return (<Ticket ticket={ticket} />)
+        return (<Ticket key={ticket.id} ticket={ticket} />)
       })
     
 
