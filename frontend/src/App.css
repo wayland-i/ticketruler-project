@@ -1,0 +1,57 @@
+.body{
+  background: rgb(0, 0, 0);
+
+}
+
+.App{
+  text-align: center;
+  background-color: rgb(27, 27, 27);
+}
+
+.createAccount{
+  height: 865px;
+  color: white;
+}
+
+.ConcertContainer{
+  color: white;
+}
+
+img{
+   max-height: 200px;
+}
+
+.NavBar{
+  font-size: 25px;
+  font-family:  Georgia, serif;
+  width: 800px;
+  border: 5px solid rgb(187, 16, 16);
+  border-radius: .5em;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  background-color: rgb(185, 185, 185);
+  border-color: rgb(118, 39, 223);
+  /* border-radius: 25px; */
+  height: 50px;
+}
+
+
+.upcomingshows{
+  font-size: 35px;
+}
+
+.Card{
+  text-align: center;
+  border: rgb(99, 99, 99) 3px;
+  padding: 1rem;
+  width: 15rem;
+  height: 30rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px rgb(118, 39, 223);
+  color: white;
+  background-color: rgb(99, 99, 99);
+  border-radius: 25px;
+}

@@ -22,10 +22,11 @@ function Card({show}) {
 
     return (
         <div className="Card">
-            {show.show_name} <br></br>
-            {show.show_time} <br></br>
-            {show.musician} <br></br>
-            {show.tickets_left} <br></br>
+            <p>{show.show_name}</p> 
+            <p>{show.show_time}</p> 
+            <p>{show.musician}</p> 
+            <p>{show.tickets_left}</p> 
+            <br></br>
             <img alt="Musician" style={{ width: "15rem" }} src={show.image_url}></img>
             <button onClick={() => setToggle(!toggle)} >Purchase Tickets</button>
             {toggle ? 
