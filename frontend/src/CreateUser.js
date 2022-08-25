@@ -1,16 +1,7 @@
 import React,{useEffect, useState} from "react";
 
-function CreateUser() {
+function CreateUser({users}) {
     
-    const [users, setUsers] = useState([])
-    //check if user already exists
-    useEffect(() => {
-            fetch("http://localhost:9292/users")
-            .then((r) => r.json())
-            .then((user) => setUsers(user));
-          }, [])
-          console.log(users)
-
     //create new user
     const myFunction = (e) => {
         e.preventDefault()
