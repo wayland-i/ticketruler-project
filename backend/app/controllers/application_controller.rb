@@ -26,14 +26,15 @@ class ApplicationController < Sinatra::Base
     shows.to_json
   end
 
+  get "/users-all" do
+    users = User.all
+    users.to_json
+  end
+  
+
   get "/tickets-available" do
     ticket = Ticket.all
     ticket.to_json(only: [:price])
-  end
-
-  get "/users" do
-    users = User.all
-    users.to_json
   end
 
   post "/shows" do
