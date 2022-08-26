@@ -25,6 +25,8 @@ function App() {
   const [userId, setUserId] = useState(4)
 
   const [url, setUrl] = useState(`http://localhost:9292/users/${userId}`)
+
+
   
   useEffect(() => {
     fetch(url)
@@ -63,7 +65,7 @@ function App() {
         <CurrentUser userId={userId}/>
         <Navbar />
         <Routes>
-          <Route path='/' exact element={<HomePage shows={filtered} setSearchString={setSearchString} />} />
+          <Route path='/' exact element={<HomePage shows={filtered} setSearchString={setSearchString} userId={userId}/>} />
           <Route path='/AccountInfo' element={<AccountInfo setUserId={setUserId}/>} />
           <Route path='/MyTickets' element={<MyTickets user={user}/>} />
         </Routes>

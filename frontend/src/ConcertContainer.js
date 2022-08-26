@@ -2,10 +2,10 @@ import React from "react";
 import Card from "./Card";
 
 
-function ConcertContainer({shows, setCurrentShow}) {
+function ConcertContainer({shows, setCurrentShow, userId}) {
 
     const createCards = shows.map( show => {
-            return <Card setCurrentShow={setCurrentShow} key={show.id} show={show} />
+            return <Card setCurrentShow={setCurrentShow} key={show.id} show={show} userId={userId}/>
         })
     
     

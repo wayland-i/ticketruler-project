@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function Card({show}) {
+function Card({show, userId}) {
 
     const [toggle, setToggle] = useState(false)
     console.log(toggle)
@@ -9,7 +9,7 @@ function Card({show}) {
         e.preventDefault()
         const partySizeInput = e.target.partSize.value
 
-        const data = { show_id: id, user_id: 4, price: 100, party_size: partySizeInput }
+        const data = { show_id: id, user_id: userId, price: 100, party_size: partySizeInput }
 
         fetch('http://localhost:9292/ticket-create', {
             method: "POST",
