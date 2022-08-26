@@ -1,11 +1,11 @@
 import React,{useEffect, useState} from "react";
 
-function CreateUser({users}) {
+function CreateUser() {
     
     //create new user
     const myFunction = (e) => {
         e.preventDefault()
-        console.log(e.target.name.value, e.target.Email.value, e.target.password.value)
+        // console.log(e.target.name.value, e.target.Email.value, e.target.password.value)
         const newUser = { "full_name": e.target.name.value, "email": e.target.Email.value, "password": e.target.password.value }
         fetch('http://localhost:9292/users',{
             method: 'POST',

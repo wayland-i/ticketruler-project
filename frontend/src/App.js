@@ -20,13 +20,25 @@ function App() {
 
 
   const [user, setUser] = useState([]) 
+
+  const [userId, setUserId] = useState(4)
+
+  const [url, setUrl] = useState(`http://localhost:9292/users/${userId}`)
   
   useEffect(() => {
-    fetch(`http://localhost:9292/users/4`)
+    fetch(url)
     .then((r) => r.json())
     .then((user) => setUser(user))
     // .catch((error) => console.error("Error", error))
-  }, [])
+  }, [url])
+
+
+  useEffect(() => {
+    console.log(userId)
+    console.log(url)
+    setUrl(`http://localhost:9292/users/${userId}`) 
+    console.log(url)
+  }, [userId])
 
 
 
@@ -50,7 +62,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' exact element={<HomePage shows={filtered} setSearchString={setSearchString} />} />
-          <Route path='/AccountInfo' element={<AccountInfo setUser={setUser}/>} />
+          <Route path='/AccountInfo' element={<AccountInfo setUserId={setUserId}/>} />
           <Route path='/MyTickets' element={<MyTickets user={user}/>} />
         </Routes>
       </Router>

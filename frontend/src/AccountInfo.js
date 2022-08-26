@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import Login from "./Login";
 import CreateUser from "./CreateUser";
 
-function AccountInfo({ setUser }) {
+function AccountInfo({ setUserId }) {
 
    const [newUser, setNewUser] = useState(true)
 
@@ -10,7 +10,7 @@ function AccountInfo({ setUser }) {
         setNewUser(newUser=>!newUser)
     }
 
-    const [users, setUsers] = useState([])
+    // const [users, setUsers] = useState([])
     //check if user already exists
     // useEffect(() => {
     //         fetch("http://localhost:9292/users")
@@ -23,7 +23,7 @@ function AccountInfo({ setUser }) {
             <br></br>
          <button onClick={click}>{newUser?"Login": "Create Account"}</button>
 
-         {newUser?<CreateUser users = {users}/>:<Login users = {users} setUser={setUser}/>}
+         {newUser?<CreateUser/>:<Login setUserId={setUserId} />}
 
         </div> 
 
