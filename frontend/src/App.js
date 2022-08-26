@@ -62,7 +62,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' exact element={<HomePage shows={filtered} setSearchString={setSearchString} />} />
-          <Route path='/AccountInfo' element={<AccountInfo setUserId={setUserId}/>} />
+          <Route path='/AccountInfo' element={<AccountInfo setUserId={setUserId} userId={userId}/>} />
           <Route path='/MyTickets' element={<MyTickets user={user}/>} />
         </Routes>
       </Router>
