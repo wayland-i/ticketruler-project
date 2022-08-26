@@ -13,6 +13,22 @@
   color: white;
 }
 
+.Login{
+  text-align: center;
+  font-family:  Georgia, serif;
+  border: rgb(99, 99, 99) 3px;
+  padding: 1rem;
+  width: 30rem;
+  height: 10rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px rgb(45, 60 128);
+  color: rgb(0, 3, 14);
+  background-color: rgb(99, 99, 99);
+  border-radius: 25px;
+}
+
+
 .ConcertContainer{
   color: white;
 }

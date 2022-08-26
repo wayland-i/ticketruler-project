@@ -20,9 +20,11 @@ function AccountInfo() {
 
     return (
         <div className="createAccount" >
-            <br></br>
-         <button onClick={click}>{newUser?"Login": "Create Account"}</button>
-         {newUser?<CreateUser users = {users}/>:<Login users = {users}/>}
+            <div className="AccountForm">
+              <br></br>
+              <button onClick={click}>{newUser?"Login": "Create Account"}</button>
+              {newUser?<CreateUser users = {users}/>:<Login users = {users}/>}
+            </div>
         </div> 
     )
 }

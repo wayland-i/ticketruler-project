@@ -22,7 +22,7 @@ function CreateUser({users}) {
 
 
     return(
-      <>
+      <div className="Login">
         <p>Create Account</p>
         <form action="/action_page.php" method="get" id="nameform" onSubmit={(e)=>myFunction(e)}>
             <label for="name">Username:</label>
@@ -34,7 +34,7 @@ function CreateUser({users}) {
             <button type="submit" form="nameform" value="Submit" >Submit</button>
          </form>
          
-      </>
+      </div>
     )
 }
 
