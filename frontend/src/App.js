@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import AccountInfo from "./AccountInfo";
 import MyTickets from "./MyTickets";
 import HomePage from "./HomePage";
+import CurrentUser from "./CurrentUser";
 
 
 function App() {
@@ -59,10 +60,11 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <CurrentUser userId={userId}/>
         <Navbar />
         <Routes>
           <Route path='/' exact element={<HomePage shows={filtered} setSearchString={setSearchString} />} />
-          <Route path='/AccountInfo' element={<AccountInfo setUserId={setUserId} userId={userId}/>} />
+          <Route path='/AccountInfo' element={<AccountInfo setUserId={setUserId}/>} />
           <Route path='/MyTickets' element={<MyTickets user={user}/>} />
         </Routes>
       </Router>
