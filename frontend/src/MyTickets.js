@@ -6,7 +6,7 @@ function MyTickets({ user }) {
     const [userTickets, setUserTickets] = useState([])
 
     function handleDelete(id) {
-        console.log('handle deelete works')
+        console.log('handle delete works')
         console.log(id)
         const deleteArray = userTickets.filter(ticket => {
             return ticket.id !== id

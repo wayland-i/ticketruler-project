@@ -14,6 +14,8 @@ function Login({users, setUserId}) {
             .then((data) => setAllUsers(data) )
           }, [])
 
+    const form = document.getElementById('nameform');
+
     function myFunction(e){
       e.preventDefault()
       console.log(e.target.email.value, e.target.password.value)
@@ -24,7 +26,7 @@ function Login({users, setUserId}) {
       const loggedInUser = (found + 1)
       console.log(loggedInUser)
       setUserId(loggedInUser)
-
+      form.reset()
     }   
     
     const [errorMessage, setErrorMessage] = useState('')

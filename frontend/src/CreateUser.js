@@ -15,11 +15,12 @@ function CreateUser() {
             body: JSON.stringify(newUser)
         })
         alert(`Account Created! Welcome ${e.target.name.value}!`)
-        e.target.reset()
+        form.reset()
         
         
     }
 
+    const form = document.getElementById('nameform');
 
     return(
       <div className="Login">
