@@ -30,7 +30,7 @@ function Login({users, setUserId}) {
     const [errorMessage, setErrorMessage] = useState('')
 
     return(
-      <>
+      <div className="Login">
         <p>User Login</p>
          <form action="/action_page.php" method="get" id="nameform" onSubmit={(e)=>myFunction(e)}>
             <label for="email">Email:</label>
@@ -41,7 +41,7 @@ function Login({users, setUserId}) {
          </form>
          
          <p>{errorMessage}</p>
-      </>
+      </div>
     )
 }
 
